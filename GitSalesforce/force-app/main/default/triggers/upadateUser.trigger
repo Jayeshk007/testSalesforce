@@ -1,5 +1,5 @@
 trigger upadateUser on User (after update) {
-    system.debug('call1');
+    system.debug('call from branch3');
     map<Account,integer> newMap= new map<Account,integer>();
 	List<Messaging.SingleEmailMessage> mails = new List<Messaging.SingleEmailMessage>();
     for(user u:trigger.new){
