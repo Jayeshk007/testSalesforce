@@ -1,0 +1,20 @@
+<template>
+   <lightning-card title="LWC Record ID Example">
+    <div class="slds-var-m-around_medium">
+        <template if:true={contacts.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts.data}
+                columns={columns}
+                
+            >
+            </lightning-datatable>
+        </template>
+        <template if:true={contacts.error}>
+            <c-error-panel errors={contacts.error}></c-error-panel>
+        </template>
+    </div>
+
+
+   </lightning-card> 
+</template>

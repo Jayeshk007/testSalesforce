@@ -1,0 +1,32 @@
+<template>
+
+    <lightning-card title="To-Do Component">
+
+        <template for:each={todoList} for:item="todo">
+            
+                
+
+                <lightning-layout
+                        key={todo.id}
+                        class="slds-var-m-vertical_x-small"
+                    >
+                        <lightning-layout-item flexibility="grow">
+                            {todo.name}
+                            {todo.id}
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button-icon
+                                icon-name="utility:delete"
+                                onclick={deleteTodo}
+                                data-id={todo.id}
+                            ></lightning-button-icon>
+                        </lightning-layout-item>
+                    </lightning-layout>
+           
+        </template>
+
+        <lightning-button label="Add" onclick={handleAction}></lightning-button>
+
+    </lightning-card>
+    
+</template>
